@@ -1,0 +1,45 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: tcc-demo
+
+  # 404 错误
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    schema: classpath:scheme.sql
+    url: jdbc:h2:mem:tcc_pay
+
+  h2:
+    console:
+      path: /h2
+      enabled: true
+
+org:
+  dromara:
+    hmily:
+      serializer: kryo
+      recoverDelayTime: 128
+      retryMax: 30
+      scheduledDelay: 128
+      scheduledThreadMax: 10
+      repositorySupport: db
+      started: true
+      hmilyDbConfig:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://111.229.128.2:16679/tcc?useUnicode=true&characterEncoding=utf8
+        username: root
+        password: longxiazai@123
+
+
+# 显示sql语句
+logging:
+  level:
+    org.huanglei.tcc.demo.dao: debug
+
