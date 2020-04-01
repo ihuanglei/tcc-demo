@@ -33,9 +33,9 @@ org:
       started: true
       hmilyDbConfig:
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://111.229.128.2:16679/tcc?useUnicode=true&characterEncoding=utf8
+        url: jdbc:mysql://mysql/tcc?useUnicode=true&characterEncoding=utf8
         username: root
-        password: longxiazai@123
+        password: 123456
 
 
 # 显示sql语句
